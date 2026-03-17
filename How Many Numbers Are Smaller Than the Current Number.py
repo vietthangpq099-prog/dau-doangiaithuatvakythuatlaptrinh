@@ -12,3 +12,4 @@ class Solution(object):
                     count += 1
             result.append(count)
         return result
+        
