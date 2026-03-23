@@ -7,13 +7,6 @@ class Solution(object):
         """
         tap_1 = set(nums1)
         tap_2 = set(nums2)
-        
-        chi_co_o_1 = []
-        for so in tap_1:
-            if so not in tap_2:
-                chi_co_o_1.append(so)
-        chi_co_o_2 = []
-        for so in tap_2:
-            if so not in tap_1:
-                chi_co_o_2.append(so)
+        chi_co_o_1 = list(tap_1 - tap_2)
+        chi_co_o_2 = list(tap_2 - tap_1)
         return [chi_co_o_1, chi_co_o_2]
